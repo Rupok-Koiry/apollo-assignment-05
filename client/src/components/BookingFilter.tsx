@@ -4,9 +4,10 @@ import { useLocation, useNavigate } from "react-router";
 
 type BookingFilterProps = {
   onSubmit: ({ type, location }: { type: string; location: string }) => void;
+  buttonText: string;
 };
 
-const BookingFilter = ({ onSubmit }: BookingFilterProps) => {
+const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [type, setType] = useState("");
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const BookingFilter = ({ onSubmit }: BookingFilterProps) => {
         <div className="flex flex-col">
           <label
             htmlFor="location"
-            className="block text-sm font-medium text-primary-text mb-2"
+            className="block text-left text-sm font-medium text-primary-text mb-2"
           >
             Location
           </label>
@@ -71,13 +72,17 @@ const BookingFilter = ({ onSubmit }: BookingFilterProps) => {
             <option value="new-york">New York</option>
             <option value="los-angeles">Los Angeles</option>
             <option value="chicago">Chicago</option>
+            <option value="houston">Houston</option>
+            <option value="phoenix">Phoenix</option>
+            <option value="texas">Texas</option>
+            <option value="san-antonio">San Antonio</option>
           </select>
         </div>
         {/* Car Type Selection */}
         <div className="flex flex-col">
           <label
             htmlFor="car-type"
-            className="block text-sm font-medium text-primary-text mb-2"
+            className="block text-left text-sm font-medium text-primary-text mb-2"
           >
             Car Type
           </label>
@@ -90,16 +95,21 @@ const BookingFilter = ({ onSubmit }: BookingFilterProps) => {
             required
             value={type}
           >
-            <option value="">Select Car Type</option>
+            <option value="">All Types</option>
             <option value="suv">SUV</option>
             <option value="coupe">Coupe</option>
             <option value="sedan">Sedan</option>
+            <option value="hatchback">Hatchback</option>
+            <option value="convertible">Convertible</option>
+            <option value="pickup">Pickup</option>
+            <option value="minivan">Minivan</option>
+            <option value="luxury">Luxury</option>
           </select>
         </div>
 
         {/* Submit Button */}
         <div className="md:col-span-2">
-          <Button className="w-full">Search Car</Button>
+          <Button className="w-full">{buttonText}</Button>
         </div>
       </form>
     </div>

@@ -40,19 +40,24 @@ const CarFilters: React.FC = () => {
         <div className="flex items-center border-secondary-grey rounded-md shadow-sm focus:border-primary-orange border outline-none py-1.5 lg:py-2 px-3">
           <FaCarSide className="text-primary-orange mr-2" />
           <select
-            className="w-full focus:outline-none  bg-transparent text-secondary-text"
+            className="w-full focus:outline-none bg-transparent text-secondary-text"
             onChange={handleTypeChange}
           >
             <option value="">All Types</option>
             <option value="suv">SUV</option>
             <option value="coupe">Coupe</option>
             <option value="sedan">Sedan</option>
+            <option value="hatchback">Hatchback</option>
+            <option value="convertible">Convertible</option>
+            <option value="pickup">Pickup</option>
+            <option value="minivan">Minivan</option>
+            <option value="luxury">Luxury</option>
           </select>
         </div>
         <div className="flex items-center border-secondary-grey rounded-md shadow-sm focus:border-primary-orange border outline-none py-1.5 lg:py-2 px-3">
           <FaDollarSign className="text-primary-green mr-2" />
           <select
-            className="w-full focus:outline-none  bg-transparent text-secondary-text"
+            className="w-full focus:outline-none bg-transparent text-secondary-text"
             onChange={handlePriceChange}
           >
             <option value="">Any Price</option>
@@ -60,7 +65,11 @@ const CarFilters: React.FC = () => {
             <option value="20_30">$20 - $30</option>
             <option value="30_40">$30 - $40</option>
             <option value="40_50">$40 - $50</option>
-            <option value="over_50">Over $50</option>
+            <option value="50_60">$50 - $60</option>
+            <option value="60_70">$60 - $70</option>
+            <option value="70_80">$70 - $80</option>
+            <option value="80_90">$80 - $90</option>
+            <option value="90_100">$90 - $100</option>
           </select>
         </div>
       </div>

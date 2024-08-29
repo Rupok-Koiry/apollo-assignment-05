@@ -19,7 +19,7 @@ The Car Rental System is a web application designed to facilitate the booking an
 
 ## Live URL
 
-Check out the live version of the application here: [Drive Now](https://your-live-url.com)
+Check out the live version of the application here: [Drive Now](https://apollo-assignment-05-jup2.vercel.app/)
 
 ## Features
 
@@ -62,8 +62,8 @@ Ensure you have the following installed:
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/Rupok-Koiry/ph-assignment-03
-   cd ph-assignment-03/server
+   git clone https://github.com/Rupok-Koiry/apollo-assignment-05
+   cd apollo-assignment-05/server
    ```
 
 2. **Install dependencies**:

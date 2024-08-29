@@ -1,6 +1,6 @@
-# Car Rental System
+# Drive Now - Car Rental System
 
-Welcome to the Car Rental System! This guide will help you set up and run the Car Rental System application locally on your machine.
+Welcome to **Drive Now**! This guide will help you set up and run both the server and client sides of the Car Rental System application locally on your machine.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ The Car Rental System is a web application designed to facilitate the booking an
 
 ## Live URL
 
-Check out the live version of the application here: [Car Rental System](https://your-live-url.com)
+Check out the live version of the application here: [Drive Now](https://your-live-url.com)
 
 ## Features
 
@@ -30,10 +30,23 @@ Check out the live version of the application here: [Car Rental System](https://
 
 ## Technology Used
 
-- **Backend**: Node.js, Express.js, MongoDB, Mongoose
-- **Authentication**: JWT, Bcrypt
-- **Validation**: Zod
-- **Others**: TypeScript, Dotenv
+### Backend
+
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **Mongoose**
+- **JWT** for Authentication
+- **Bcrypt** for Password Hashing
+- **Zod** for Validation
+- **TypeScript**
+- **Dotenv**
+
+### Frontend
+
+- **React**
+- **Tailwind CSS**
+- **Framer Motion** for Animations
 
 ## Prerequisites
 
@@ -44,11 +57,27 @@ Ensure you have the following installed:
 
 ## Installation
 
+### Server
+
 1. **Clone the repository**:
 
    ```sh
    git clone https://github.com/Rupok-Koiry/ph-assignment-03
-   cd ph-assignment-03
+   cd ph-assignment-03/server
+   ```
+
+2. **Install dependencies**:
+
+   ```sh
+   npm install
+   ```
+
+### Client
+
+1. **Navigate to the client directory**:
+
+   ```sh
+   cd ../client
    ```
 
 2. **Install dependencies**:
@@ -59,7 +88,9 @@ Ensure you have the following installed:
 
 ## Setting Up Environment Variables
 
-Create a `.env` file in the root directory and add the required environment variables:
+Create a `.env` file in both the `server` and `client` directories and add the required environment variables:
+
+### Server
 
 ```env
 NODE_ENV=development
@@ -71,15 +102,35 @@ JWT_EXPIRES_IN=30d
 JWT_COOKIE_EXPIRES_IN=30
 ```
 
-## Running the Application
+### Client
 
-To run the application in development mode with hot-reloading:
-
-```sh
-npm install
-npm start:dev
+```env
+REACT_APP_API_URL=http://localhost:8000/api
+REACT_APP_ENV=development
 ```
 
-The application will be accessible at http://localhost:8000.
+## Running the Application
 
-Thank you for using the Car Rental System! Happy riding! 🚗💨
+### Server
+
+To run the server in development mode with hot-reloading:
+
+```sh
+cd server
+npm run start:dev
+```
+
+The server will be accessible at http://localhost:8000.
+
+### Client
+
+To run the client in development mode:
+
+```sh
+cd client
+npm start
+```
+
+The client will be accessible at http://localhost:5176.
+
+Thank you for using **Drive Now**! Happy riding! 🚗💨

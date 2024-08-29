@@ -64,7 +64,7 @@ const reviewData = [
 const Testimonials = () => {
   return (
     <section>
-      <div className="container mx-auto py-12 lg:py-16 ">
+      <div className="container mx-auto py-10 lg:py-12 px-5">
         <h2 className="text-3xl text-primary-text text-center font-semibold mb-4">
           Trusted Reviews
         </h2>

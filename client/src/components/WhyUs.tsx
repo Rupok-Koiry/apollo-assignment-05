@@ -2,40 +2,38 @@ import { useState } from "react";
 
 const WhyUs = () => {
   return (
-    <section className="relative md:py-10 py-12">
-      <div className="container mx-auto">
-        <h2 className="text-3xl text-primary-text text-center font-semibold mb-4">
-          Why Choose Drive <span className="text-primary-orange">Now</span>?
-        </h2>
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="Best Prices Guaranteed"
-              text="At Drive Now, we offer the most competitive prices on the market. Our Price Match Guarantee ensures you always get the best deal. Save more with us and enjoy additional discounts and promotions available throughout the year."
-            />
-            <AccordionItem
-              header="Wide Selection of Vehicles"
-              text="Choose from a vast range of vehicles to suit your needs, from economy cars to luxury SUVs. Whether you're traveling solo or with family, we have the perfect vehicle for every journey."
-            />
-            <AccordionItem
-              header="24/7 Customer Support"
-              text="Our dedicated customer support team is available 24/7 to assist you with any inquiries or issues. From booking to returning your vehicle, we are here to ensure a smooth and hassle-free rental experience."
-            />
-          </div>
-          <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="Flexible Rental Options"
-              text="We understand that plans can change. That’s why Drive Now offers flexible rental options with easy modifications and cancellations. Adjust your booking as needed with minimal hassle."
-            />
-            <AccordionItem
-              header="Comprehensive Insurance Coverage"
-              text="Drive with peace of mind knowing that all our rentals come with comprehensive insurance coverage. Additional coverage options are available to suit your needs, ensuring you are always protected on the road."
-            />
-            <AccordionItem
-              header="Convenient Pick-Up and Drop-Off Locations"
-              text="With numerous pick-up and drop-off locations across the city, renting a car has never been easier. Enjoy the flexibility of choosing a location that is most convenient for you."
-            />
-          </div>
+    <section className="md:py-10 py-12 container mx-auto px-5">
+      <h2 className="text-3xl text-primary-text text-center font-semibold mb-4">
+        Why Choose Drive <span className="text-primary-orange">Now</span>?
+      </h2>
+      <div className="-mx-4 flex flex-wrap">
+        <div className="w-full px-4 lg:w-1/2">
+          <AccordionItem
+            header="Best Prices Guaranteed"
+            text="At Drive Now, we offer the most competitive prices on the market. Our Price Match Guarantee ensures you always get the best deal. Save more with us and enjoy additional discounts and promotions available throughout the year."
+          />
+          <AccordionItem
+            header="Wide Selection of Vehicles"
+            text="Choose from a vast range of vehicles to suit your needs, from economy cars to luxury SUVs. Whether you're traveling solo or with family, we have the perfect vehicle for every journey."
+          />
+          <AccordionItem
+            header="24/7 Customer Support"
+            text="Our dedicated customer support team is available 24/7 to assist you with any inquiries or issues. From booking to returning your vehicle, we are here to ensure a smooth and hassle-free rental experience."
+          />
+        </div>
+        <div className="w-full px-4 lg:w-1/2">
+          <AccordionItem
+            header="Flexible Rental Options"
+            text="We understand that plans can change. That’s why Drive Now offers flexible rental options with easy modifications and cancellations. Adjust your booking as needed with minimal hassle."
+          />
+          <AccordionItem
+            header="Comprehensive Insurance Coverage"
+            text="Drive with peace of mind knowing that all our rentals come with comprehensive insurance coverage. Additional coverage options are available to suit your needs, ensuring you are always protected on the road."
+          />
+          <AccordionItem
+            header="Convenient Pick-Up and Drop-Off Locations"
+            text="With numerous pick-up and drop-off locations across the city, renting a car has never been easier. Enjoy the flexibility of choosing a location that is most convenient for you."
+          />
         </div>
       </div>
     </section>

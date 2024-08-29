@@ -41,7 +41,7 @@ const Booking = () => {
   };
   return (
     <section className="bg-primary-background py-8 lg:py-10  container mx-auto px-5">
-      <BookingFilter onSubmit={handleSubmit} />
+      <BookingFilter onSubmit={handleSubmit} buttonText="Search Car" />
       {showFilterCars && (
         <CarList buttonText="Book Now" onButtonClick={handleButtonClick} />
       )}

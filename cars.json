@@ -114,5 +114,150 @@
       "Bose Sound System"
     ],
     "pricePerHour": 60
+  },
+  {
+    "name": "Subaru Outback",
+    "images": [
+      "https://images.unsplash.com/photo-1616804087673-cdcd32e5578f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB"
+    ],
+    "description": "A versatile crossover with off-road capabilities and a comfortable interior.",
+    "color": "Blue",
+    "type": "crossover",
+    "status": "available",
+    "features": ["All-Wheel Drive", "Roof Rack", "Harman Kardon Audio"],
+    "pricePerHour": 25
+  },
+  {
+    "name": "Mazda MX-5 Miata",
+    "images": [
+      "https://images.unsplash.com/photo-1692011249564-f068e80ccea5?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8f"
+    ],
+    "description": "A lightweight convertible with precise handling and a sporty feel.",
+    "color": "Red",
+    "type": "convertible",
+    "status": "available",
+    "features": [
+      "Manual Transmission",
+      "Convertible Roof",
+      "Bose Sound System"
+    ],
+    "pricePerHour": 28
+  },
+  {
+    "name": "Kia Sorento",
+    "images": [
+      "https://images.unsplash.com/photo-1694649686884-0d62d0dc47d1?q=80&w=2010&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%"
+    ],
+    "description": "A midsize SUV with a comfortable cabin and a suite of safety features.",
+    "color": "White",
+    "type": "suv",
+    "status": "available",
+    "features": ["Lane Keeping Assist", "Panoramic Sunroof", "Apple CarPlay"],
+    "pricePerHour": 35
+  },
+  {
+    "name": "Nissan Leaf",
+    "images": [
+      "https://images.unsplash.com/photo-1674451899249-07138fde3746?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f"
+    ],
+    "description": "A fully electric vehicle offering zero emissions and a smooth, quiet ride.",
+    "color": "Silver",
+    "type": "hatchback",
+    "status": "available",
+    "features": ["ProPILOT Assist", "Quick Charge Port", "Navigation System"],
+    "pricePerHour": 25
+  },
+  {
+    "name": "Audi A4",
+    "images": [
+      "https://images.unsplash.com/photo-1536150794560-43f988aec18e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "A luxury sedan with a refined interior and advanced technology features.",
+    "color": "Black",
+    "type": "sedan",
+    "status": "available",
+    "features": ["Quattro All-Wheel Drive", "Virtual Cockpit", "Sunroof"],
+    "pricePerHour": 38
+  },
+  {
+    "name": "Chevrolet Silverado",
+    "images": [
+      "https://images.unsplash.com/photo-1521657142174-c7353dc830cd?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "A powerful and durable truck capable of handling heavy loads and off-road terrain.",
+    "color": "Red",
+    "type": "truck",
+    "status": "available",
+    "features": ["Tow Package", "Off-Road Suspension", "Apple CarPlay"],
+    "pricePerHour": 40
+  },
+  {
+    "name": "Hyundai Santa Fe",
+    "images": [
+      "https://images.unsplash.com/photo-1674110997072-41f11b7d4ae7?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "A family-friendly SUV with a spacious interior and advanced safety features.",
+    "color": "Blue",
+    "type": "suv",
+    "status": "available",
+    "features": ["Blind Spot Collision Warning", "Heated Seats", "Roof Rails"],
+    "pricePerHour": 30
+  },
+  {
+    "name": "Volvo XC90",
+    "images": [
+      "https://images.unsplash.com/photo-1495397112255-e790bee720b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "A luxury SUV with a focus on safety, comfort, and innovative technology.",
+    "color": "Gray",
+    "type": "suv",
+    "status": "available",
+    "features": [
+      "Pilot Assist",
+      "360-Degree Camera",
+      "Leather Interior",
+      "Panoramic Sunroof"
+    ],
+    "pricePerHour": 48
+  },
+  {
+    "name": "Range Rover Evoque",
+    "images": [
+      "https://images.unsplash.com/photo-1604054094723-3a949e4a8993?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "A compact luxury SUV with stylish design and off-road capabilities.",
+    "color": "Green",
+    "type": "suv",
+    "status": "available",
+    "features": ["Terrain Response", "Touch Pro Duo", "Panoramic Roof"],
+    "pricePerHour": 55
+  },
+  {
+    "name": "Jaguar F-Type",
+    "images": [
+      "https://images.unsplash.com/photo-1517342463979-7f018ddc30f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D"
+    ],
+    "description": "A sports coupe with a powerful engine and sharp handling, perfect for spirited drives.",
+    "color": "Red",
+    "type": "coupe",
+    "status": "available",
+    "features": ["Dynamic Mode", "Meridian Sound System", "Performance Seats"],
+    "pricePerHour": 60
+  },
+  {
+    "name": "Toyota Prius",
+    "images": [
+      "https://images.unsplash.com/photo-1592840062661-a5a7f78e2056?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "A hybrid hatchback with excellent fuel efficiency and eco-friendly features.",
+    "color": "Silver",
+    "type": "hatchback",
+    "status": "available",
+    "features": [
+      "Hybrid Synergy Drive",
+      "Navigation System",
+      "Rearview Camera"
+    ],
+    "pricePerHour": 18
   }
 ]
