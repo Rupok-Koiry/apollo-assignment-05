@@ -25,7 +25,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--primary-orange);
+  background-color: aquamarine;
 }
 .swiper-button-prev {
   left: 0;

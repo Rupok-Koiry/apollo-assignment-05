@@ -12,6 +12,7 @@ import Cars from "./pages/Cars";
 import CarDetails from "./pages/CarDetails";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
+import "./App.css";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -23,8 +24,6 @@ import ManageReturn from "./pages/ManageReturn";
 import ManagePayment from "./pages/ManagePayment";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentError from "./pages/PaymentError";
-
-import "./App.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {

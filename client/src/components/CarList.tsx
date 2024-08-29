@@ -7,17 +7,22 @@ import ErrorMessage from "./ErrorMessage";
 type CarListProps = {
   buttonText: string;
   onButtonClick: (car: CarTypes) => void;
+  carCount?: number;
 };
 
-function CarList({ buttonText, onButtonClick }: CarListProps) {
+function CarList({ buttonText, onButtonClick, carCount }: CarListProps) {
   const { cars, error, isLoading } = useCars();
+  const displayedCars = carCount ? cars?.slice(0, carCount) : cars;
 
   if (isLoading) return <Spinner />;
   if (error) return <ErrorMessage message={`${error.message}!`} />;
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container px-5 mx-auto">
-      {cars?.map((car: CarTypes) => (
-        <div className="bg-primary-white border border-secondary-grey rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+      {displayedCars?.map((car: CarTypes) => (
+        <div
+          className="bg-primary-white border border-secondary-grey rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105"
+          key={car._id}
+        >
           <div className="relative">
             <img
               src={car.images[0]}
