@@ -1,9 +1,17 @@
-import { Link } from "react-router-dom";
-import CarFilters from "./CarFilters";
-import Button from "./Button";
+import { useNavigate } from "react-router";
 import BookingFilter from "./BookingFilter";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const handleSubmit = ({
+    location,
+    type,
+  }: {
+    location: string;
+    type: string;
+  }) => {
+    navigate(`/booking?location=${location}&type=${type}`);
+  };
   return (
     <section className="hero md:h-[80vh] p-8 md:p-0 flex justify-center items-center text-center rounded-b-xl overflow-hidden">
       <div className="md:w-2/3">
@@ -15,7 +23,7 @@ const Hero = () => {
           it's a weekend getaway or a business trip, Drive Now has the perfect
           car waiting for you.
         </p>
-        <BookingFilter />
+        <BookingFilter onSubmit={handleSubmit} />
       </div>
     </section>
   );
