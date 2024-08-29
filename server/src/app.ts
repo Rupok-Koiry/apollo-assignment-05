@@ -1,5 +1,4 @@
 import cookieParser from 'cookie-parser';
-import cors from 'cors';
 import express, { Application } from 'express';
 import errorHandler from './app/middlewares/errorHandler';
 import notFound from './app/middlewares/notFound';
@@ -12,9 +11,6 @@ app.use(express.json());
 
 // Middleware for parsing cookies
 app.use(cookieParser());
-
-// Middleware for enabling Cross-Origin Resource Sharing (CORS) for specified origins
-app.use(cors({ origin: [process.env.CLIENT_URL!] }));
 
 // Route handlers for API endpoints prefixed with /api/v1
 app.use('/api', router);
