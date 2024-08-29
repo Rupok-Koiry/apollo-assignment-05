@@ -1,7 +1,7 @@
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express, { Application } from 'express';
-import globalErrorHandler from './app/middlewares/globalErrorhandler';
+import errorHandler from './app/middlewares/errorHandler';
 import notFound from './app/middlewares/notFound';
 import router from './app/routes';
 
@@ -20,7 +20,7 @@ app.use(cors({ origin: ['http://localhost:5173'] }));
 app.use('/api', router);
 
 // Middleware for handling global errors
-app.use(globalErrorHandler);
+app.use(errorHandler);
 
 // Middleware for handling 404 - Not Found errors
 app.use(notFound);
