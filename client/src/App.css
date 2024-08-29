@@ -18,14 +18,14 @@
 }
 
 .swiper-pagination-bullet {
-  background: var(--primary-grey);
+  background: var(--primary-grey) !important;
   opacity: 1;
   width: 10px;
   height: 10px;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: aquamarine;
+  background-color: var(--primary-orange) !important;
 }
 .swiper-button-prev {
   left: 0;
