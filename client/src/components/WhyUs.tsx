@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import SectionTitle from "../SectionTitle/SectionTitle";
+import { useState } from "react";
 
 const WhyUs = () => {
   return (
@@ -77,7 +76,7 @@ const WhyUs = () => {
 
 export default WhyUs;
 
-const AccordionItem = ({ header, text }) => {
+const AccordionItem = ({ header, text }: { header: string; text: string }) => {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => {
