@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -63,18 +64,18 @@ const Footer: React.FC = () => {
           <div className="mb-4 md:mb-0">
             <h2 className="text-lg font-semibold mb-2">Legal</h2>
             <div className="flex flex-col space-y-2">
-              <a
-                href="/privacy-policy"
+              <Link
+                to="/privacy-policy"
                 className="text-secondary-text hover:text-primary-orange transition-all ease-in duration-300"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="/terms-of-service"
+              </Link>
+              <Link
+                to="/terms-of-service"
                 className="text-secondary-text hover:text-primary-orange transition-all ease-in duration-300"
               >
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
 

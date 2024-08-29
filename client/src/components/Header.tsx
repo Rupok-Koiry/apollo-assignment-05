@@ -96,6 +96,18 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
+                <NavLink
+                  to="/cars"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-primary-orange transition duration-300 font-medium"
+                      : "hover:text-primary-orange transition duration-300 font-medium"
+                  }
+                >
+                  Cars
+                </NavLink>
+              </li>
+              <li>
                 <HashLink
                   smooth
                   scroll={scrollWithOffset}

@@ -13,7 +13,7 @@ const FeaturedCars = () => {
         <CarList
           buttonText="View Details"
           onButtonClick={(car) => navigate(`/car/${car._id}`)}
-          carCount={3}
+          carCount={6}
         />
       </div>
     </section>
