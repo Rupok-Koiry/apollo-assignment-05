@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Middleware for enabling Cross-Origin Resource Sharing (CORS) for specified origins
-app.use(cors({ origin: ['http://localhost:5173'] }));
+app.use(cors({ origin: [process.env.CLIENT_URL!] }));
 
 // Route handlers for API endpoints prefixed with /api/v1
 app.use('/api', router);
