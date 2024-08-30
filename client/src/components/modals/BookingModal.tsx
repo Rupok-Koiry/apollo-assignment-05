@@ -91,8 +91,8 @@ const BookingModal: React.FC<BookingModalProps> = ({
                       size={24}
                     />
 
-                    <p className="text-lg text-primary-text flex items-center">
-                      {feature}
+                    <p className="text-lg text-primary-text flex items-center capitalize">
+                      {feature?.split("-")?.join(" ")}{" "}
                     </p>
                   </div>
                 ))}

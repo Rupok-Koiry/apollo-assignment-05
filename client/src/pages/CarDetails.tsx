@@ -100,25 +100,11 @@ const CarDetailsPage = () => {
           </div>
         </div>
 
-        {/* Features */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4 flex items-center text-primary-text">
-            <FaStar className="mr-2 text-primary-orange" /> Features
-          </h2>
-          <ul className="list-disc list-inside text-lg text-primary-text">
-            {car.features.map((feature, index) => (
-              <li key={index} className="mb-2">
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* Additional Options */}
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 flex items-center text-primary-text">
             <FaShieldAlt className="mr-2 text-primary-orange" /> Additional
-            Options
+            Features
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {car.features.map((feature, index) => (
@@ -126,7 +112,7 @@ const CarDetailsPage = () => {
                 <FaCheckCircle className="mr-2 text-primary-green" size={24} />
 
                 <p className="text-lg text-primary-text flex items-center capitalize">
-                  {feature}
+                  {feature?.split("-")?.join(" ")}
                 </p>
               </div>
             ))}
