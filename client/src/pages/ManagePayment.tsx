@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "../components/Button";
 import ErrorMessage from "../components/ErrorMessage";
 import Spinner from "../components/Spinner";
@@ -8,8 +9,11 @@ import { format } from "date-fns";
 
 const ManagePayment = () => {
   const { userBookings, error, isLoading } = useUserBookings();
+  const [loading, setLoading] = useState(false);
   const handlePayment = async (bookingId: string) => {
+    setLoading(true);
     const response = await api.post(`/payment/init-payment`, { bookingId });
+    setLoading(false);
     window.location.href = response.data.data;
   };
   const unPaidBookings = userBookings?.filter(
@@ -121,6 +125,8 @@ const ManagePayment = () => {
                     <Button
                       className="text-sm py-2 px-2"
                       onClick={() => handlePayment(booking._id)}
+                      disabled={loading}
+                      loading={loading}
                     >
                       Pay
                     </Button>
