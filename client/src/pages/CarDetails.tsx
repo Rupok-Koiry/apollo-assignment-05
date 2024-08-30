@@ -168,7 +168,11 @@ const CarDetailsPage = () => {
 
         {/* Book Now Button */}
         <div className="flex justify-center">
-          <Button className="text-lg" href="/booking">
+          <Button
+            className="text-lg"
+            href="/booking"
+            disabled={car.status === "unavailable"}
+          >
             <FaCar className="mr-2" /> Book Now
           </Button>
         </div>
