@@ -21,7 +21,6 @@ export const deleteOne = <T>(Model: Model<T>) =>
     });
   });
 
-
 export const updateOne = <T>(Model: Model<T>) =>
   catchAsync(async (req: Request, res: Response, next: NextFunction) => {
     const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {

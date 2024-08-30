@@ -69,14 +69,14 @@ const Dashboard = () => {
           <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StatsCard
               title="Total Bookings"
-              value={bookings?.length}
+              value={bookings?.length || 0}
               textColor="text-primary-blue"
               borderColor="border-primary-blue"
               icon={<FaClipboardList size={30} />}
             />
             <StatsCard
               title="Available Cars"
-              value={cars?.length}
+              value={cars?.length || 0}
               textColor="text-primary-green"
               borderColor="border-primary-green"
               icon={<FaCar size={30} />}
@@ -103,7 +103,7 @@ const Dashboard = () => {
               value={
                 bookings?.filter(
                   (booking: BookingTypes) => booking.status === "pending"
-                ).length
+                ).length || 0
               }
               textColor="text-primary-red"
               borderColor="border-primary-red"

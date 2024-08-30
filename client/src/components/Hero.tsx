@@ -22,7 +22,11 @@ const Hero = () => {
           it's a weekend getaway or a business trip, Drive Now has the perfect
           car waiting for you.
         </p>
-        <BookingFilter onSubmit={handleSubmit} buttonText="Book Now" />
+        <BookingFilter
+          onSubmit={handleSubmit}
+          buttonText="Book Now"
+          showFeatures={false}
+        />
       </div>
     </section>
   );

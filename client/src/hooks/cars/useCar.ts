@@ -12,6 +12,7 @@ export function useCar() {
   } = useQuery({
     queryKey: ["car", carId],
     queryFn: () => getCars(carId as string),
+    retry: false,
   });
 
   return { isLoading, car, error };

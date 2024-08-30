@@ -125,7 +125,7 @@ const CarDetailsPage = () => {
               <div className="flex items-center" key={index}>
                 <FaCheckCircle className="mr-2 text-primary-green" size={24} />
 
-                <p className="text-lg text-primary-text flex items-center">
+                <p className="text-lg text-primary-text flex items-center capitalize">
                   {feature}
                 </p>
               </div>

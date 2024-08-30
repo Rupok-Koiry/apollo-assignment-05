@@ -45,6 +45,15 @@ class APIFeatures<T> {
       delete queryObj.price;
     }
 
+    // Handle filtering by features
+    if (queryObj.features) {
+      const featuresArray = queryObj.features
+        .split(',')
+        .map((feature: any) => feature.trim());
+
+      queryObj.features = { $all: featuresArray };
+    }
+
     // Advanced filtering for other query parameters
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);

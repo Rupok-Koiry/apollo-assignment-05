@@ -1,5 +1,6 @@
 import { Navigate } from "react-router-dom";
 import { useMe } from "../hooks/auth/useMe";
+import Spinner from "./Spinner";
 type ProtectedRouteProps = {
   children: React.ReactNode;
   restrictTo?: string[];
@@ -12,7 +13,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const { isLoading, user } = useMe();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Spinner className="h-screen" />;
   }
   if (!user) return <Navigate to="/login" />;
 

@@ -8,7 +8,7 @@
     "color": "Red",
     "type": "sedan",
     "status": "available",
-    "features": ["Air Conditioning", "Bluetooth", "Cruise Control"],
+    "features": ["air-conditioning", "bluetooth", "cruise-control"],
     "pricePerHour": 15
   },
   {
@@ -20,7 +20,7 @@
     "color": "Blue",
     "type": "coupe",
     "status": "available",
-    "features": ["Leather Seats", "Heated Seats", "Premium Audio"],
+    "features": ["leather-seats", "heated-seats", "premium-audio"],
     "pricePerHour": 35
   },
   {
@@ -32,7 +32,7 @@
     "color": "White",
     "type": "sedan",
     "status": "available",
-    "features": ["Autopilot", "Touchscreen Display", "Navigation System"],
+    "features": ["autopilot", "touchscreen-display", "navigation-system"],
     "pricePerHour": 40
   },
   {
@@ -44,7 +44,7 @@
     "color": "Black",
     "type": "sedan",
     "status": "available",
-    "features": ["Rearview Camera", "Lane Departure Warning", "Bluetooth"],
+    "features": ["rearview-camera", "lane-departure-warning", "bluetooth"],
     "pricePerHour": 12
   },
   {
@@ -56,7 +56,7 @@
     "color": "Gray",
     "type": "suv",
     "status": "available",
-    "features": ["4WD", "Third Row Seating", "Rear Entertainment System"],
+    "features": ["4wd", "third-row-seating", "rear-entertainment-system"],
     "pricePerHour": 50
   },
   {
@@ -68,7 +68,7 @@
     "color": "Silver",
     "type": "suv",
     "status": "available",
-    "features": ["Panoramic Sunroof", "Blind Spot Monitoring", "Apple CarPlay"],
+    "features": ["panoramic-sunroof", "blind-spot-monitoring", "apple-carplay"],
     "pricePerHour": 45
   },
   {
@@ -80,7 +80,7 @@
     "color": "Green",
     "type": "suv",
     "status": "available",
-    "features": ["4WD", "Removable Top", "Off-Road Tires"],
+    "features": ["4wd", "removable-top", "off-road-tires"],
     "pricePerHour": 30
   },
   {
@@ -93,9 +93,9 @@
     "type": "sedan",
     "status": "available",
     "features": [
-      "Leather Interior",
-      "Adaptive Cruise Control",
-      "Navigation System"
+      "leather-interior",
+      "adaptive-cruise-control",
+      "navigation-system"
     ],
     "pricePerHour": 42
   },
@@ -109,9 +109,9 @@
     "type": "coupe",
     "status": "available",
     "features": [
-      "Sports Exhaust",
-      "Porsche Active Suspension",
-      "Bose Sound System"
+      "sports-exhaust",
+      "porsche-active-suspension",
+      "bose-sound-system"
     ],
     "pricePerHour": 60
   },
@@ -124,7 +124,7 @@
     "color": "Blue",
     "type": "crossover",
     "status": "available",
-    "features": ["All-Wheel Drive", "Roof Rack", "Harman Kardon Audio"],
+    "features": ["all-wheel-drive", "roof-rack", "harman-kardon-audio"],
     "pricePerHour": 25
   },
   {
@@ -137,9 +137,9 @@
     "type": "convertible",
     "status": "available",
     "features": [
-      "Manual Transmission",
-      "Convertible Roof",
-      "Bose Sound System"
+      "manual-transmission",
+      "convertible-roof",
+      "bose-sound-system"
     ],
     "pricePerHour": 28
   },
@@ -152,7 +152,7 @@
     "color": "White",
     "type": "suv",
     "status": "available",
-    "features": ["Lane Keeping Assist", "Panoramic Sunroof", "Apple CarPlay"],
+    "features": ["lane-keeping-assist", "panoramic-sunroof", "apple-carplay"],
     "pricePerHour": 35
   },
   {
@@ -164,7 +164,7 @@
     "color": "Silver",
     "type": "hatchback",
     "status": "available",
-    "features": ["ProPILOT Assist", "Quick Charge Port", "Navigation System"],
+    "features": ["propilot-assist", "quick-charge-port", "navigation-system"],
     "pricePerHour": 25
   },
   {
@@ -176,7 +176,7 @@
     "color": "Black",
     "type": "sedan",
     "status": "available",
-    "features": ["Quattro All-Wheel Drive", "Virtual Cockpit", "Sunroof"],
+    "features": ["quattro-all-wheel-drive", "virtual-cockpit", "sunroof"],
     "pricePerHour": 38
   },
   {
@@ -188,7 +188,7 @@
     "color": "Red",
     "type": "truck",
     "status": "available",
-    "features": ["Tow Package", "Off-Road Suspension", "Apple CarPlay"],
+    "features": ["tow-package", "off-road-suspension", "apple-carplay"],
     "pricePerHour": 40
   },
   {
@@ -200,7 +200,7 @@
     "color": "Blue",
     "type": "suv",
     "status": "available",
-    "features": ["Blind Spot Collision Warning", "Heated Seats", "Roof Rails"],
+    "features": ["blind-spot-collision-warning", "heated-seats", "roof-rails"],
     "pricePerHour": 30
   },
   {
@@ -213,10 +213,10 @@
     "type": "suv",
     "status": "available",
     "features": [
-      "Pilot Assist",
-      "360-Degree Camera",
-      "Leather Interior",
-      "Panoramic Sunroof"
+      "pilot-assist",
+      "360-degree-camera",
+      "leather-interior",
+      "panoramic-sunroof"
     ],
     "pricePerHour": 48
   },
@@ -229,7 +229,7 @@
     "color": "Green",
     "type": "suv",
     "status": "available",
-    "features": ["Terrain Response", "Touch Pro Duo", "Panoramic Roof"],
+    "features": ["terrain-response", "touch-pro-duo", "panoramic-roof"],
     "pricePerHour": 55
   },
   {
@@ -241,7 +241,7 @@
     "color": "Red",
     "type": "coupe",
     "status": "available",
-    "features": ["Dynamic Mode", "Meridian Sound System", "Performance Seats"],
+    "features": ["dynamic-mode", "meridian-sound-system", "performance-seats"],
     "pricePerHour": 60
   },
   {
@@ -254,9 +254,9 @@
     "type": "hatchback",
     "status": "available",
     "features": [
-      "Hybrid Synergy Drive",
-      "Navigation System",
-      "Rearview Camera"
+      "hybrid-synergy-drive",
+      "navigation-system",
+      "rearview-camera"
     ],
     "pricePerHour": 18
   }

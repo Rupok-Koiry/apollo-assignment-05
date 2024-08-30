@@ -24,7 +24,7 @@ interface FormData {
   color: string;
   type: string;
   status: "available" | "unavailable";
-  features: string[];
+  features: string;
   images: string[];
 }
 
@@ -50,7 +50,7 @@ const CarModal: React.FC<CarModalProps> = ({
       color: "",
       type: "",
       status: "available",
-      features: [],
+      features: "",
       images: [],
     },
   });
@@ -69,7 +69,7 @@ const CarModal: React.FC<CarModalProps> = ({
         color: car.color,
         type: car.type,
         status: car.status,
-        features: car.features,
+        features: car.features.join(", "),
         images: car.images,
       });
       setUploadedImages(car.images);
@@ -81,7 +81,7 @@ const CarModal: React.FC<CarModalProps> = ({
         color: "",
         type: "",
         status: "available",
-        features: [],
+        features: "",
         images: [],
       });
       setUploadedImages([]);
@@ -90,15 +90,21 @@ const CarModal: React.FC<CarModalProps> = ({
 
   const onSubmit = (newCar: FormData) => {
     clearErrors("images");
-
-    console.log(newCar);
-
+    const features = newCar.features
+      .split(", ")
+      .map((f) => f.toLowerCase().trim().split(" ").join("-"));
     newCar.pricePerHour = Number(newCar.pricePerHour);
     newCar.images = uploadedImages;
     if (car) {
-      updateCar({ newCar, carId: car?._id });
+      updateCar({
+        newCar: {
+          ...newCar,
+          features,
+        },
+        carId: car?._id,
+      });
     } else {
-      createCar(newCar);
+      createCar({ ...newCar, features });
     }
     closeModal();
   };
@@ -344,7 +350,7 @@ const CarModal: React.FC<CarModalProps> = ({
                   ))}
                 </div>
               </div>
-              <Button className="w-full" disabled={loading}>
+              <Button className="w-full" disabled={loading} loading={loading}>
                 {car ? "Update Car" : "Add Car"}
               </Button>
             </form>

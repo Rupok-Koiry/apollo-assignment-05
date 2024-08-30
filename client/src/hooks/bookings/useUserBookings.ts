@@ -9,6 +9,7 @@ export function useUserBookings() {
   } = useQuery({
     queryKey: ["userBookings"],
     queryFn: getUserBookings,
+    retry: false,
   });
 
   return { isLoading, userBookings, error };

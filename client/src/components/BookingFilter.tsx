@@ -1,17 +1,42 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import Button from "./Button";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 type BookingFilterProps = {
-  onSubmit: ({ type, location }: { type: string; location: string }) => void;
+  onSubmit: ({
+    type,
+    location,
+    features,
+  }: {
+    type: string;
+    location: string;
+    features: string;
+  }) => void;
   buttonText: string;
+  showFeatures?: boolean;
 };
+const topFeatures = [
+  "navigation-system",
+  "bluetooth",
+  "air-conditioning",
+  "leather-seats",
+  "rearview-camera",
+  "apple-carplay",
+  "sunroof",
+  "adaptive-cruise-control",
+  "all-wheel-drive",
+  "heated-seats",
+];
 
-const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
+const BookingFilter = ({
+  onSubmit,
+  buttonText,
+  showFeatures = true,
+}: BookingFilterProps) => {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [type, setType] = useState("");
+  const [features, setFeatures] = useState<string[]>([]);
   const navigate = useNavigate();
-  const location = useLocation();
 
   const updateQueryParam = (key: string, value: string) => {
     const searchParams = new URLSearchParams(location.search);
@@ -20,17 +45,30 @@ const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
     } else {
       searchParams.delete(key);
     }
-    navigate({ search: searchParams.toString() }, { replace: true });
+    let newSearch = searchParams.toString();
+    newSearch = decodeURIComponent(newSearch);
+    navigate({ search: newSearch }, { replace: true });
   };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     updateQueryParam("status", "available");
     updateQueryParam("location", selectedLocation);
     updateQueryParam("type", type);
+    updateQueryParam("features", features.join(","));
     onSubmit({
       type,
       location: selectedLocation,
+      features: features.join(","),
     });
+  };
+
+  const handleFeatureChange = (feature: string) => {
+    setFeatures((prev) =>
+      prev.includes(feature)
+        ? prev.filter((f) => f !== feature)
+        : [...prev, feature]
+    );
   };
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -39,11 +77,9 @@ const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
 
     if (locationParam) setSelectedLocation(locationParam);
     if (typeParam) setType(typeParam);
-  }, [location.search]);
-
+  }, []);
   return (
     <div className="max-w-4xl bg-primary-white shadow-lg rounded-lg p-8 mx-auto mb-10">
-      {" "}
       <h2 className="text-3xl font-bold text-primary-text mb-6 text-center">
         Book Your Car Rental
       </h2>
@@ -78,6 +114,7 @@ const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
             <option value="san-antonio">San Antonio</option>
           </select>
         </div>
+
         {/* Car Type Selection */}
         <div className="flex flex-col">
           <label
@@ -92,7 +129,6 @@ const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
             onChange={(e: ChangeEvent<HTMLSelectElement>) =>
               setType(e.target.value)
             }
-            required
             value={type}
           >
             <option value="">All Types</option>
@@ -106,6 +142,30 @@ const BookingFilter = ({ onSubmit, buttonText }: BookingFilterProps) => {
             <option value="luxury">Luxury</option>
           </select>
         </div>
+
+        {/* Additional Features */}
+        {showFeatures && (
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-2">Additional Features</h3>
+            <div className="flex flex-wrap gap-4">
+              {topFeatures.map((feature) => (
+                <div key={feature} className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id={feature}
+                    checked={features.includes(feature)}
+                    onChange={() => handleFeatureChange(feature)}
+                    className="mr-2"
+                    value={feature}
+                  />
+                  <label htmlFor={feature} className="capitalize">
+                    {feature.replace("-", " ")}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Submit Button */}
         <div className="md:col-span-2">
